@@ -102,11 +102,11 @@ class BinarySearchTree {
       if (!curNode) return null
       if (curNode.data < value) {
         if (curNode.right) {
-          removeData(curNode.right, value)
+          curNode.right = removeData(curNode.right, value)
         }
       } else if (curNode.data > value) {
         if (curNode.left) {
-          removeData(curNode.left, value)
+          curNode.left = removeData(curNode.left, value)
         }
       } else {
         if (curNode.left === null && curNode.right === null) return null
